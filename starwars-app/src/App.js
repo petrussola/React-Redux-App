@@ -25,7 +25,7 @@ function App() {
   return (
     <StyledApp className="App">
       <div className="listWrapper">
-        <ListPeople />
+        <ListPeople/>
       </div>
       <div className="selectedPerson">
         <PersonCard />
