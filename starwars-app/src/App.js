@@ -6,16 +6,31 @@ import styled from "styled-components";
 import ListPeople from "./components/ListPeople";
 import PersonCard from "./components/PersonCard";
 
+// MEDIA
+
+import img from "./media/criss-cross.png";
+
+const StyledApp = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 75vw;
+  margin: 0 auto;
+  .listWrapper, .selectedPerson {
+    background: repeat url(${img});
+    width: 50%;
+  }
+`;
+
 function App() {
   return (
-    <div className="App">
+    <StyledApp className="App">
       <div className="listWrapper">
         <ListPeople />
       </div>
       <div className="selectedPerson">
         <PersonCard />
       </div>
-    </div>
+    </StyledApp>
   );
 }
 
