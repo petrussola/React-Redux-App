@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actionCreators from '../state/actionCreators';
+import NoDataPersonCard from './NoDataPersonCard';
+import PersonCardDetails from './PersonCardDetails';
 
 export function PersonCard({listPeople, selectedPerson}) {
     
@@ -8,13 +10,11 @@ export function PersonCard({listPeople, selectedPerson}) {
         return person.name === selectedPerson;
     });
 
-    return (
-        <div>
-            {
-                !cardPerson ? <h1>noo</h1> : <h1>{cardPerson.name}</h1>
-            }
-        </div>
-    )
+    if (!cardPerson) {
+        return <NoDataPersonCard />
+    } else {
+        return <PersonCardDetails cardPerson={cardPerson}/>
+    }
 }
 
 export default connect(
