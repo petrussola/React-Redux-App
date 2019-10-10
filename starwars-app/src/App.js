@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 // COMPONENTS
-import Counter from './components/Counter';
+import Counter from './components/listPeople';
 
 function App() {
   return (
