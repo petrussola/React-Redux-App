@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import PeopleCard from "./peopleCard";
+import PeopleCard from "./PeopleCard";
 import uuid from 'uuid';
+import styled from 'styled-components';
 
 // STATE
 import { connect } from "react-redux";
