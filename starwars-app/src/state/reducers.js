@@ -1,12 +1,22 @@
 import * as types from "./actionTypes";
 
-const initialValue = 0;
+const initialListPeople = [];
+const initialSelectedPerson = "";
 
-export function countReducer(count = initialValue, action) {
+export function listPeopleReducer(listPeople = initialListPeople, action) {
   switch (action.type) {
-    case types.INCREMENT:
-      return count + 1;
+    case types.ADD_PEOPLE_LIST:
+        return [action.payload.listPeople];
     default:
-      return count;
+      return listPeople;
   }
+}
+
+export function selectPersonReducer(selectedPerson = initialSelectedPerson, action) {
+    switch (action.type) {
+        case types.SELECT_PERSON:
+            return action.payload.name;
+        default:
+            return listPeople;
+    }
 }
