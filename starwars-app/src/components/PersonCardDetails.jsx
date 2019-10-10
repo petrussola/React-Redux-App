@@ -1,6 +1,10 @@
 import React from "react";
 
 export default function PersonCardDetails({ cardPerson }) {
+
+  if (!cardPerson) {
+    return null
+  }
   return (
     <div>
       <h1>{cardPerson.name}</h1>
