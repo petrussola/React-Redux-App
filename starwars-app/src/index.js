@@ -6,20 +6,23 @@ import * as serviceWorker from "./serviceWorker";
 
 // STATE MANAGEMENT
 import * as reducers from "./state/reducers";
-import { combineReducers, createStore } from "redux";
+import { combineReducers, createStore, compose, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 
 // MONSTER REDUCER
 
 const masterReducer = combineReducers({
-    listPeople: reducers.listPeopleReducer,
-    selectedPerson: reducers.selectPersonReducer
+  listPeople: reducers.listPeopleReducer,
+  selectedPerson: reducers.selectPersonReducer
 });
 
 // STORE
 const store = createStore(
   masterReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  compose(
+    applyMiddleware(thunk),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
 );
 
 ReactDOM.render(
