@@ -12,7 +12,8 @@ import { Provider } from "react-redux";
 // MONSTER REDUCER
 
 const masterReducer = combineReducers({
-  count: reducers.countReducer
+    listPeople: reducers.listPeopleReducer,
+    selectedPerson: reducers.selectPersonReducer
 });
 
 // STORE

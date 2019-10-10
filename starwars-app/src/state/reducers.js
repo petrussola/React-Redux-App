@@ -6,7 +6,7 @@ const initialSelectedPerson = "";
 export function listPeopleReducer(listPeople = initialListPeople, action) {
   switch (action.type) {
     case types.ADD_PEOPLE_LIST:
-        return [action.payload.listPeople];
+        return [action.payload.listPeopleApi];
     default:
       return listPeople;
   }
@@ -17,6 +17,6 @@ export function selectPersonReducer(selectedPerson = initialSelectedPerson, acti
         case types.SELECT_PERSON:
             return action.payload.name;
         default:
-            return listPeople;
+            return selectedPerson;
     }
 }
