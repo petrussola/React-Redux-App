@@ -18,7 +18,7 @@ export function selectPersonReducer(
 ) {
   switch (action.type) {
     case types.SELECT_PERSON:
-      return action.payload.name;
+      return action.payload;
     default:
       return selectedPerson;
   }
