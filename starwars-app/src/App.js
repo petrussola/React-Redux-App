@@ -1,16 +1,20 @@
-import React from 'react';
-import './App.css';
-import styled from 'styled-components';
+import React from "react";
+import "./App.css";
+import styled from "styled-components";
 
 // COMPONENTS
-import ListPeople from './components/ListPeople';
-import PersonCard from './components/PersonCard';
+import ListPeople from "./components/ListPeople";
+import PersonCard from "./components/PersonCard";
 
 function App() {
   return (
     <div className="App">
-      <ListPeople />
-      <PersonCard />
+      <div className="listWrapper">
+        <ListPeople />
+      </div>
+      <div className="selectedPerson">
+        <PersonCard />
+      </div>
     </div>
   );
 }
