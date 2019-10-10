@@ -8,6 +8,7 @@ import * as serviceWorker from "./serviceWorker";
 import * as reducers from "./state/reducers";
 import { combineReducers, createStore, compose, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
+import thunk from 'redux-thunk';
 
 // MONSTER REDUCER
 
