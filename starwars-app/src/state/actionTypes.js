@@ -1,0 +1,2 @@
+export const ADD_PEOPLE_LIST = 'ADD_PEOPLE_LIST';
+export const SELECT_PERSON = 'SELECT_PERSON';
